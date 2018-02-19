@@ -9,7 +9,10 @@ import {
   Tooltip,
   ButtonToolbar,
   OverlayTrigger,
-  Button
+  Button,
+  Grid,
+  Row,
+  Col
 } from 'react-bootstrap';
 
 class App extends Component {
@@ -77,8 +80,13 @@ class App extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <button type="button" className="btn btn-default" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Left</button>
-        {positionerInstance}
+        <Grid>
+          <Row className="show-grid">
+            <Col xs={12} md={8}>
+              {positionerInstance}
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }
