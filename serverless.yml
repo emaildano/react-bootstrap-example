@@ -1,0 +1,13 @@
+service: aws-nodejs # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+plugins:
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: shifter-style-guide
+    distributionFolder: build

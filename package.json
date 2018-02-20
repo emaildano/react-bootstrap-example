@@ -11,7 +11,8 @@
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.2.0",
     "react-lorem-component": "^0.12.2",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "serverless-finch": "^1.4.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
