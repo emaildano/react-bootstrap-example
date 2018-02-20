@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import {
   Navbar,
   NavItem,
@@ -12,78 +11,29 @@ import {
   Button,
   Grid,
   Row,
-  Col
+  Col,
+  PageHeader,
 } from 'react-bootstrap';
+
+import Indicators from './components/indicators';
+import Navbars from './components/navbars';
 
 class App extends Component {
 
   render() {
 
-    const tooltip = (
-      <Tooltip id="tooltip">
-        <strong>Holy guacamole!</strong> Check this info.
-      </Tooltip>
-    );
-
-    const positionerInstance = (
-      <ButtonToolbar>
-        <OverlayTrigger placement="left" overlay={tooltip}>
-          <Button bsStyle="default">Holy guacamole!</Button>
-        </OverlayTrigger>
-
-        <OverlayTrigger placement="top" overlay={tooltip}>
-          <Button bsStyle="default">Holy guacamole!</Button>
-        </OverlayTrigger>
-
-        <OverlayTrigger placement="bottom" overlay={tooltip}>
-          <Button bsStyle="default">Holy guacamole!</Button>
-        </OverlayTrigger>
-
-        <OverlayTrigger placement="right" overlay={tooltip}>
-          <Button bsStyle="default">Holy guacamole!</Button>
-        </OverlayTrigger>
-      </ButtonToolbar>
-    );
-
     return (
       <div className="App">
-        <Navbar inverse collapseOnSelect>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#brand">React-Bootstrap</a>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-              <NavItem eventKey={1} href="#">
-                Link
-              </NavItem>
-              <NavItem eventKey={2} href="#">
-                Link
-              </NavItem>
-              <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1}>Action</MenuItem>
-                <MenuItem eventKey={3.2}>Another action</MenuItem>
-                <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey={3.3}>Separated link</MenuItem>
-              </NavDropdown>
-            </Nav>
-            <Nav pullRight>
-              <NavItem eventKey={1} href="#">
-                Link Right
-              </NavItem>
-              <NavItem eventKey={2} href="#">
-                Link Right
-              </NavItem>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+        <div className="_gradient-purple-magenta">
+          <Indicators />
+        </div>
         <Grid>
-          <Row className="show-grid">
-            <Col xs={12} md={8}>
-              {positionerInstance}
+          <Row>
+            <Col>
+              <PageHeader>
+                Navbar
+              </PageHeader>
+              <Navbars />
             </Col>
           </Row>
         </Grid>

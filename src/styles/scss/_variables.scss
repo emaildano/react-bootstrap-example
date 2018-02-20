@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
 
 // Font Variables
 $roboto-slab: 'Roboto Slab', serif;
@@ -16,12 +16,14 @@ $bootstrap-sass-asset-helper: false !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
+$white:                  #fff !default;
 $gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              #7b8a8b !default;   // #333
-$gray:                   #95a5a6 !default; // #555
-$gray-light:             #b4bcc2 !default;   // #999
-$gray-lighter:           #ecf0f1 !default; // #eee
+$gray-darker:            lighten($gray-base, 13.5%) !default;
+$gray-dark:              #7b8a8b !default;
+$gray:                   #95a5a6 !default;
+$gray-light:             #b4bcc2 !default;
+$gray-lighter:           #ecf0f1 !default;
+$black:                  #000 !default;
 
 $purple:                #bc4e9c;
 $magenta:               #f80759;
@@ -78,7 +80,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    $font-family-base !default;
-$headings-font-weight:    400 !default;
+$headings-font-weight:    200 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
