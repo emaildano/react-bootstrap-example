@@ -54,12 +54,13 @@ class Alerts extends React.Component {
        </div>
      );
 
-    return (<div className="_black">
+    return (<div>
+      <div className="_gradient-purple-magenta section-padding">
       <Grid>
         <Row>
           <Col sm={12}>
             <PageHeader className="white">
-              Indicators
+              Indicators <small>Inverse</small>
             </PageHeader>
             <Well className="_white">
               <h4>Oh snap! You got an error!</h4>
@@ -67,16 +68,10 @@ class Alerts extends React.Component {
                 Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
               </p>
             </Well>
-            <Alert bsStyle="success">
-              <h4>Oh snap! You got an error!</h4>
-              <p>
-                Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
-              </p>
-            </Alert>
           </Col>
         </Row>
         <Row>
-          <Col sm={4}>
+          <Col sm={12}>
             <Alert bsStyle="info">
               <h4>Oh snap! You got an error!</h4>
               <p>
@@ -84,32 +79,52 @@ class Alerts extends React.Component {
               </p>
             </Alert>
           </Col>
-          <Col sm={4}>
-            <Alert bsStyle="warning">
-              <h4>Oh snap! You got an error!</h4>
-              <p>
-                Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
-              </p>
-            </Alert>
-          </Col>
-          <Col sm={4}>
-            <Alert bsStyle="danger">
-              <h4>Oh snap! You got an error!</h4>
-              <p>
-                Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
-              </p>
-            </Alert>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={4}>
-            {Labels}
-          </Col>
-          <Col sm={6}>
-            {navInstance}
-          </Col>
         </Row>
       </Grid>
+    </div>
+    <Grid className="section-padding">
+      <Row>
+        <Col sm={12}>
+          <PageHeader>
+            Indicators
+          </PageHeader>
+        </Col>
+      </Row>
+      <Row className="section-padding">
+        <Col sm={4}>
+          {Labels}
+        </Col>
+        <Col sm={6}>
+          {navInstance}
+        </Col>
+      </Row>
+      <Row>
+        <Col sm={4}>
+          <Alert bsStyle="success">
+            <h4>Oh snap! You got an error!</h4>
+            <p>
+              Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
+            </p>
+          </Alert>
+        </Col>
+        <Col sm={4}>
+          <Alert bsStyle="warning">
+            <h4>Oh snap! You got an error!</h4>
+            <p>
+              Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
+            </p>
+          </Alert>
+        </Col>
+        <Col sm={4}>
+          <Alert bsStyle="danger">
+            <h4>Oh snap! You got an error!</h4>
+            <p>
+              Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
+            </p>
+          </Alert>
+        </Col>
+      </Row>
+    </Grid>
     </div>);
   }
 }

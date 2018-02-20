@@ -17,6 +17,7 @@ import {
 
 import Indicators from './components/indicators';
 import Navbars from './components/navbars';
+import Panels from './components/panels';
 
 class App extends Component {
 
@@ -24,9 +25,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="_gradient-purple-magenta">
-          <Indicators />
-        </div>
+        <Indicators />
+        <Panels />
         <Grid>
           <Row>
             <Col>
