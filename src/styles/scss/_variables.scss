@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500');
 
 // Font Variables
 $roboto-slab: 'Roboto Slab', serif;
@@ -69,7 +70,7 @@ $link-hover-decoration: underline !default;
 $font-family-sans-serif:  $montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       $roboto-slab, Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-monospace:   'Source Code Pro', Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          16px !default;
@@ -90,7 +91,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    $font-family-base !default;
-$headings-font-weight:    100 !default;
+$headings-font-weight:    200 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
@@ -166,7 +167,7 @@ $table-border-color:            $gray-lighter !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                200 !default;
+$btn-font-weight:                400 !default;
 
 $btn-default-color:              $white !default;
 $btn-default-bg:                 $purple-dark !default;
@@ -195,9 +196,9 @@ $btn-danger-border:              $btn-danger-bg !default;
 $btn-link-disabled-color:        $gray-light !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius-base:         2em !default;
-$btn-border-radius-large:        2em !default;
-$btn-border-radius-small:        2em !default;
+$btn-border-radius-base:         $border-radius-base !default;
+$btn-border-radius-large:        $border-radius-base !default;
+$btn-border-radius-small:        $border-radius-base !default;
 
 
 //== Forms

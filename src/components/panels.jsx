@@ -43,6 +43,36 @@ class Panels extends Component {
       <div className="section-padding"></div>
     </div>)
 
+    const panelsFlexExample = (
+      <Row>
+        <Col sm={6}>
+          <Panel className="flex-column">
+            <Panel.Heading>
+              <Panel.Title componentClass="h3">Panel heading</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>Panel content</Panel.Body>
+            <Panel.Footer>Panel footer</Panel.Footer>
+          </Panel>
+          <Panel>
+            <Panel.Heading>
+              <Panel.Title componentClass="h3">Panel heading</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>Panel content</Panel.Body>
+            <Panel.Footer>Panel footer</Panel.Footer>
+          </Panel>
+        </Col>
+        <Col className="flex-column" sm={6}>
+          <Panel className="flex-grow flex-column">
+            <Panel.Heading>
+              <Panel.Title componentClass="h3">Panel heading</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body className="flex-grow">Panel content</Panel.Body>
+            <Panel.Footer>Panel footer</Panel.Footer>
+          </Panel>
+        </Col>
+      </Row>
+    )
+
     return (<div>
       <div className="_gradient-purple">
         <Grid>
@@ -81,6 +111,10 @@ class Panels extends Component {
               {browserMock}
             </Col>
           </Row>
+          <div className="section-padding"></div>
+        </Grid>
+        <Grid>
+          {panelsFlexExample}
         </Grid>
         <div className="section-padding"></div>
       </div>

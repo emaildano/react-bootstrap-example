@@ -12,7 +12,7 @@ body {
 
 // Forms
 label {
-  font-weight: 200;
+  font-weight: 300;
 }
 
 // Help Block
@@ -30,6 +30,11 @@ input {
 
 // Buttons
 .btn {
+  @include button-size(0, $padding-base-horizontal, $font-size-base, 40px, $btn-border-radius-base);
+  height: 40px;
+  transition: all 0.3s ease-out;
+  font-family: $font-family-monospace;
+
   &.btn-success {
     @extend ._gradient-purple;
   }
@@ -60,7 +65,7 @@ input {
 
 // Labels
 .label {
-  font-weight: 100;
+  font-weight: 400;
   padding: .5em 2em;
   font-family: $font-family-monospace;
 
@@ -109,4 +114,20 @@ h1, h2, h3, h4, h5, h6,
 // Modals
 .modal-title {
   font-size: 24px;
+}
+
+
+// Flex Helpers
+.flex-column {
+  flex-direction: column;
+  display: flex;
+  box-orient: vertical;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.row {
+  display: flex;
 }

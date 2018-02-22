@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500");
 .section-padding {
   padding-bottom: 60px; }
 
@@ -1304,7 +1305,7 @@ hr {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.1;
   color: inherit; }
   h1 small,
@@ -1617,7 +1618,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace; }
 
 code {
   padding: 2px 4px;
@@ -2952,7 +2953,7 @@ select[multiple].input-lg,
 .btn {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: 200;
+  font-weight: 400;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -2963,7 +2964,7 @@ select[multiple].input-lg,
   padding: 11px 25px;
   font-size: 16px;
   line-height: 1.5;
-  border-radius: 2em;
+  border-radius: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3238,19 +3239,19 @@ fieldset[disabled] a.btn {
   padding: 18px 27px;
   font-size: 20px;
   line-height: 1.33333;
-  border-radius: 2em; }
+  border-radius: 6px; }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 6px 9px;
   font-size: 14px;
   line-height: 1.5;
-  border-radius: 2em; }
+  border-radius: 6px; }
 
 .btn-xs, .btn-group-xs > .btn {
   padding: 1px 5px;
   font-size: 14px;
   line-height: 1.5;
-  border-radius: 2em; }
+  border-radius: 6px; }
 
 .btn-block {
   display: block;
@@ -3550,16 +3551,16 @@ tbody.collapse.in {
   border-radius: 0; }
 
 .btn-group-vertical > .btn:first-child:not(:last-child) {
-  border-top-right-radius: 2em;
-  border-top-left-radius: 2em;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
 .btn-group-vertical > .btn:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-  border-bottom-right-radius: 2em;
-  border-bottom-left-radius: 2em; }
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px; }
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0; }
@@ -6221,10 +6222,19 @@ body {
   font-weight: 300; }
 
 label {
-  font-weight: 200; }
+  font-weight: 300; }
 
 input + .help-block {
   margin-top: 11px; }
+
+.btn {
+  padding: 0 25px;
+  font-size: 16px;
+  line-height: 40px;
+  border-radius: 6px;
+  height: 40px;
+  transition: all 0.3s ease-out;
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace; }
 
 .dropdown-menu li a {
   font-weight: 300; }
@@ -6233,9 +6243,9 @@ input + .help-block {
   border: transparent; }
 
 .label {
-  font-weight: 100;
+  font-weight: 400;
   padding: .5em 2em;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace; }
   .label.label-primary {
     color: #000; }
 
@@ -6268,3 +6278,14 @@ h6 .small,
 
 .modal-title {
   font-size: 24px; }
+
+.flex-column {
+  flex-direction: column;
+  display: flex;
+  box-orient: vertical; }
+
+.flex-grow {
+  flex-grow: 1; }
+
+.row {
+  display: flex; }
