@@ -1,7 +1,76 @@
+body {
+  font-weight: 300;
+}
+
+// Navs
+.navbar-nav,
+.nav {
+  a {
+    font-weight: 300;
+  }
+}
+
+// Forms
+label {
+  font-weight: 200;
+}
+
+// Help Block
+.help-block {
+  @extend .alert;
+  @extend .well-sm;
+  @extend .alert-info;
+}
+
+input {
+  + .help-block {
+    margin-top: $padding-base-vertical;
+  }
+}
+
+// Buttons
+.btn {
+  &.btn-success {
+    @extend ._gradient-purple;
+  }
+
+  &.btn-info {
+    @extend ._gradient-purple-dark;
+  }
+}
+
+// Dropdown
+.dropdown-menu {
+  li a {
+    font-weight: 300;
+  }
+}
+
+.alert {
+  border: transparent;
+
+  &.alert-success {
+    @extend ._gradient-purple;
+  }
+
+  &.alert-info {
+    @extend ._gradient-purple-dark;
+  }
+}
 
 // Labels
 .label {
-  font-weight: 300;
+  font-weight: 100;
+  padding: .5em 2em;
+  font-family: $font-family-monospace;
+
+  &.label-primary {
+    color: $black;
+  }
+
+  &.label-success {
+    @extend ._gradient-purple;
+  }
 }
 
 // Headings
@@ -12,4 +81,32 @@ h1, h2, h3, h4, h5, h6,
   .small {
     font-weight: 100;
   }
+}
+
+// Panels
+.panel {
+  box-shadow: 0 10px 40px 0 rgba(62,57,107,0.2), 0 2px 9px 0 rgba(62,57,107,0.06);
+  border: 0;
+  font-weight: 300;
+}
+
+.panel-footer {
+  color: $white;
+  @extend ._gradient-purple-dark;
+}
+
+._gradient-purple-dark {
+  .panel-footer {
+    @extend ._gradient-purple;
+  }
+}
+
+.panel-title {
+  font-size: 24px;
+}
+
+
+// Modals
+.modal-title {
+  font-size: 24px;
 }

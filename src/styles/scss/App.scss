@@ -41,8 +41,18 @@ $color-styles: (
   }
 }
 
-._gradient-purple-magenta {
-  background-image: linear-gradient(90deg, $purple, $magenta);
+._gradient-purple {
+  background-image: linear-gradient(40deg, $purple, $magenta);
+}
+
+._gradient-purple-dark {
+  background-image: linear-gradient(40deg, transparent 0%, $black 100%);
+  background-color: $purple-dark;
+}
+
+._gradient-purple-dark--reverse {
+  background-image: linear-gradient(40deg, transparent 0%, $purple-dark 100%);
+  background-color: $black;
 }
 
 .logomark {
@@ -58,4 +68,6 @@ $color-styles: (
 
 @import "bootstrap-sass/assets/stylesheets/_bootstrap-sprockets.scss";
 @import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "buttons";
+@import "browser-mock";
 @import "theme-custom";
