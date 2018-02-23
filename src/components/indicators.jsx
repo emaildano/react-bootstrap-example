@@ -1,56 +1,32 @@
 import React, {Component} from 'react';
 import {
   Alert,
-  Grid,
+  Container,
   Row,
   Col,
   Label,
-  Well,
-  PageHeader,
   NavItem,
   Nav,
   Badge
-} from 'react-bootstrap';
+} from 'reactstrap';
 
 class Alerts extends Component {
 
   render() {
 
     /**
-     * Nav with badges / Pills
-     */
-
-    function handleSelect(selectedKey) {
-      alert(`selected ${selectedKey}`);
-    }
-
-    const navPills = (<div>
-      <h2>Nav Pills</h2>
-      <Nav bsStyle="pills" activeKey={1} onSelect={handleSelect}>
-        <NavItem eventKey={1} href="/home">
-          Home
-          <Badge>42</Badge>
-        </NavItem>
-        <NavItem eventKey={2} title="Item">
-          Profile
-        </NavItem>
-        <NavItem eventKey={3} disabled="disabled">
-          Messages
-          <Badge>3</Badge>
-        </NavItem>
-      </Nav>
-    </div>);
-
-    /**
      * Lables
      */
 
-    const Labels = (<div>
-      <h2>Labels</h2>
-      <Label bsStyle="success">Success</Label>{' '}
-      <Label bsStyle="info">Info</Label>{' '}
-      <Label bsStyle="warning">Warning</Label>{' '}
-      <Label bsStyle="danger">Danger</Label>
+    const Badges = (<div>
+      <Badge color="primary">Primary</Badge>{' '}
+      <Badge color="secondary">Secondary</Badge>{' '}
+      <Badge color="success">Success</Badge>{' '}
+      <Badge color="danger">Danger</Badge>{' '}
+      <Badge color="warning">Warning</Badge>{' '}
+      <Badge color="info">Info</Badge>{' '}
+      <Badge color="light">Light</Badge>{' '}
+      <Badge color="dark">Dark</Badge>
     </div>);
 
     /**
@@ -60,12 +36,12 @@ class Alerts extends Component {
     const indicatorsInverseBlack = (<div>
       <Row>
         <Col sm={12}>
-          <Well>
+          <Alert>
             <h4>Oh snap! You got an error!</h4>
             <p>
               Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
             </p>
-          </Well>
+          </Alert>
         </Col>
       </Row>
       <Row>
@@ -80,11 +56,14 @@ class Alerts extends Component {
       </Row>
       <Row>
         <Col sm={12}>
-          <h2 className="white">Labels</h2>
-          <Label bsStyle="primary">Primary</Label>{' '}
-          <Label bsStyle="success">Success</Label>{' '}
-          <Label bsStyle="warning">Warning</Label>{' '}
-          <Label bsStyle="danger">Danger</Label>
+          <h3 className="white">Badges</h3>
+            <Badge color="white">Primary</Badge>{' '}
+            <Badge color="success">Success</Badge>{' '}
+            <Badge color="danger">Danger</Badge>{' '}
+            <Badge color="warning">Warning</Badge>{' '}
+            <Badge color="info">Info</Badge>{' '}
+            <Badge color="light">Light</Badge>{' '}
+            <Badge color="dark">Dark</Badge>
         </Col>
       </Row>
     </div>)
@@ -92,17 +71,13 @@ class Alerts extends Component {
     const indicatorsInversePurple = (<div>
       <Row>
         <Col sm={12}>
-          <Well className="_white">
+          <Alert color="white">
             <h4>Oh snap! You got an error!</h4>
             <p>
               Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
             </p>
-          </Well>
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={12}>
-          <Alert bsStyle="info">
+          </Alert>
+          <Alert color="purple-dark">
             <h4>Oh snap! You got an error!</h4>
             <p>
               Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
@@ -112,54 +87,53 @@ class Alerts extends Component {
       </Row>
       <Row>
         <Col sm={12}>
-          <h2 className="white">Labels</h2>
-          <Label bsStyle="primary">Primary</Label>{' '}
-          <Label bsStyle="default">Default</Label>
+          <h2 className="white">Badges</h2>
+            <Badge color="white">Primary</Badge>{' '}
+            <Badge color="danger">Danger</Badge>{' '}
+            <Badge color="warning">Warning</Badge>{' '}
+            <Badge color="info">Info</Badge>{' '}
+            <Badge color="light">Light</Badge>{' '}
+            <Badge color="dark">Dark</Badge>
         </Col>
       </Row>
     </div>)
 
     return (<div>
       <div className="_gradient-purple section-padding">
-        <Grid>
-          <PageHeader className="white">
+        <Container>
+          <h2 className="white">
             Indicators <small>Purple</small>
-          </PageHeader>
+        </h2>
           {indicatorsInversePurple}
-        </Grid>
+        </Container>
       </div>
       <div className="_gradient-purple-dark section-padding">
-        <Grid>
-          <PageHeader className="white">
+        <Container>
+          <h2 className="white">
             Indicators <small>Purple Dark</small>
-          </PageHeader>
+        </h2>
           {indicatorsInverseBlack}
-        </Grid>
+        </Container>
       </div>
       <div className="_black section-padding">
-        <Grid>
-          <PageHeader className="white">
+        <Container>
+          <h2 className="white">
             Indicators <small>Black</small>
-          </PageHeader>
+        </h2>
           {indicatorsInverseBlack}
-        </Grid>
+        </Container>
       </div>
-      <Grid className="section-padding">
+      <Container>
         <Row>
           <Col sm={12}>
-            <PageHeader>
+            <h2>
               Indicators
-            </PageHeader>
+            </h2>
           </Col>
         </Row>
         <Row className="section-padding">
           <Col sm={12}>
-            {Labels}
-          </Col>
-        </Row>
-        <Row className="section-padding">
-          <Col sm={12}>
-            {navPills}
+            {Badges}
           </Col>
         </Row>
         <Row>
@@ -188,7 +162,7 @@ class Alerts extends Component {
             </Alert>
           </Col>
         </Row>
-      </Grid>
+      </Container>
     </div>);
   }
 }
