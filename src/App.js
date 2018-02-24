@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 import Indicators from './components/indicators';
-// import Panels from './components/panels';
+import Cards from './components/cards';
+import BrowserMock from './components/browser';
 // import Buttons from './components/buttons';
-// import Modals from './components/modals';
+import Modals from './components/modals';
 // import Forms from './components/forms';
-import ReactstrapDemo from './components/reactstrap';
 
 class App extends Component {
 
@@ -14,7 +14,9 @@ class App extends Component {
     return (
       <div className="App">
         <Indicators />
-        <ReactstrapDemo />
+        <Cards />
+        <BrowserMock />
+        <Modals />
       </div>
     );
   }
